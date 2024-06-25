@@ -11,8 +11,6 @@ namespace ET.Client
         protected override async ETTask Run(Scene root, EntryEvent3 args)
         {
             root.AddComponent<GlobalComponent>();
-            root.AddComponent<UIGlobalComponent>();
-            root.AddComponent<UIComponent>();
             root.AddComponent<ResourcesLoaderComponent>();
             root.AddComponent<PlayerComponent>();
             root.AddComponent<CurrentScenesComponent>();

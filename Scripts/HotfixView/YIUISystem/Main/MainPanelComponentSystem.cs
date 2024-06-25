@@ -1,0 +1,36 @@
+﻿using System;
+using UnityEngine;
+using YIUIFramework;
+using System.Collections.Generic;
+
+namespace ET.Client
+{
+    /// <summary>
+    /// Author  Lsy
+    /// Date    2024.6.24
+    /// Desc
+    /// </summary>
+    [FriendOf(typeof(MainPanelComponent))]
+    public static partial class MainPanelComponentSystem
+    {
+        [EntitySystem]
+        private static void YIUIInitialize(this MainPanelComponent self)
+        {
+        }
+
+        [EntitySystem]
+        private static void Destroy(this MainPanelComponent self)
+        {
+        }
+
+        [EntitySystem]
+        private static async ETTask<bool> YIUIOpen(this MainPanelComponent self)
+        {
+            await ETTask.CompletedTask;
+            return true;
+        }
+
+        #region YIUIEvent开始
+        #endregion YIUIEvent结束
+    }
+}

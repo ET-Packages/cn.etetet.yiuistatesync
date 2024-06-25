@@ -94,30 +94,6 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Assets/GameRes/YIUI
-        CollectorGUID: 38aff9b4b3f3ca0459417ed8f1416685
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: YIUIFilterRule
-        AssetTags: 
-        UserData: 
-      - CollectPath: Assets/GameRes/RedDot
-        CollectorGUID: 61ca0abb5085c2846a4d47dad5588e6b
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
-      - CollectPath: Assets/GameRes/I2Localization
-        CollectorGUID: 6b12b5bc50ff8a247901abc227af8ed1
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
       - CollectPath: Packages/cn.etetet.yiuigm/Assets/GameRes/YIUI/GM
         CollectorGUID: 402b4d6cf6e56a34f86fb9b173431056
         CollectorType: 0
@@ -134,8 +110,8 @@ MonoBehaviour:
         FilterRuleName: YIUIFilterRule
         AssetTags: 
         UserData: 
-      - CollectPath: Packages/cn.etetet.yiuireddot/Assets/GameRes/RedDot
-        CollectorGUID: 064901bcbdeacd040a95ac689b59f03b
+      - CollectPath: Packages/cn.etetet.yiuistatesync/Assets/GameRes/YIUI
+        CollectorGUID: 38aff9b4b3f3ca0459417ed8f1416685
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory
