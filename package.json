@@ -1,46 +1,41 @@
 {
-  "name": "cn.etetet.yiuistatesync",
-  "displayName": "ET.YIUI.StateSync",
-  "version": "0.0.1",
+  "name": "cn.etetet.statesync",
+  "displayName": "ET.StateSync",
+  "version": "0.0.8",
   "unity": "2022.3",
-  "description": "YIUI ETDemo >>> 文档: https://lib9kmxvq7k.feishu.cn/wiki/ES7Gwz4EAiVGKSkotY5cRbTznuh",
+  "description": "et statesync",
   "author": {
-    "name": "YIUI",
-    "url": "https://github.com/LiShengYang-yiyi/YIUI/tree/YIUI-ET9.0"
+    "name": "tanghai",
+    "url": "https://github.com/egametang/ET"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LiShengYang-yiyi/YIUI/tree/YIUI-ET9.0"
+    "url": "https://github.com/egametang/ET"
   },
   "relatedPackages": {},
-  "gitDependencies": {
-    "cn.etetet.actorlocation": "https://github.com/ET-Packages/cn.etetet.actorlocation.git#0.0.1",
-    "cn.etetet.core": "https://github.com/ET-Packages/cn.etetet.core.git#0.0.1",
-    "cn.etetet.yooassets": "https://github.com/ET-Packages/cn.etetet.yooassets.git#0.0.1",
-    "cn.etetet.loader": "https://github.com/ET-Packages/cn.etetet.loader.git#0.0.1",
-    "cn.etetet.demores": "https://github.com/ET-Packages/cn.etetet.demores.git#0.0.1",
-    "cn.etetet.mathematics": "https://github.com/ET-Packages/cn.etetet.mathematics.git#0.0.1",
-    "cn.etetet.router": "https://github.com/ET-Packages/cn.etetet.router.git#0.0.1",
-    "cn.etetet.console": "https://github.com/ET-Packages/cn.etetet.console.git#0.0.1",
-    "cn.etetet.unit": "https://github.com/ET-Packages/cn.etetet.unit.git#0.0.1",
-    "cn.etetet.http": "https://github.com/ET-Packages/cn.etetet.http.git#0.0.1",
-    "cn.etetet.recast": "https://github.com/ET-Packages/cn.etetet.recast.git#0.0.1",
-    "cn.etetet.numeric": "https://github.com/ET-Packages/cn.etetet.numeric.git#0.0.1",
-    "cn.etetet.move": "https://github.com/ET-Packages/cn.etetet.move.git#0.0.1",
-    "cn.etetet.watcher": "https://github.com/ET-Packages/cn.etetet.watcher.git#0.0.1",
-    "cn.etetet.db": "https://github.com/ET-Packages/cn.etetet.db.git#0.0.1",
-    "cn.etetet.aoi": "https://github.com/ET-Packages/cn.etetet.aoi.git#0.0.1",
-
-    "cn.etetet.yiuiframework": "https://github.com/ET-Packages/cn.etetet.yiuiframework.git#0.0.1",
-	"cn.etetet.yiui3ddisplay": "https://github.com/ET-Packages/cn.etetet.yiui3ddisplay.git#0.0.1",
-	"cn.etetet.yiuieffect": "https://github.com/ET-Packages/cn.etetet.yiuieffect.git#0.0.1",
-	"cn.etetet.yiuigm": "https://github.com/ET-Packages/cn.etetet.yiuigm.git#0.0.1",
-	"cn.etetet.yiuilocalization": "https://github.com/ET-Packages/cn.etetet.yiuilocalization.git#0.0.1",
-	"cn.etetet.yiuiloopscrollrectasync": "https://github.com/ET-Packages/cn.etetet.yiuiloopscrollrectasync.git#0.0.1",
-	"cn.etetet.yiuireddot": "https://github.com/ET-Packages/cn.etetet.yiuireddot.git#0.0.1",
-	"cn.etetet.yiuitips": "https://github.com/ET-Packages/cn.etetet.yiuitips.git#0.0.1",
-
-    "cn.etetet.referencecollector": "https://github.com/ET-Packages/cn.etetet.referencecollector.git#0.0.1",
-    "cn.etetet.login": "https://github.com/ET-Packages/cn.etetet.login.git#0.0.1"
+  "dependencies": {
+    "cn.etetet.actorlocation": "0.0.1",
+    "cn.etetet.core": "0.0.6",
+    "cn.etetet.yooassets": "0.0.1",
+    "cn.etetet.loader": "0.0.3",
+    "cn.etetet.demores": "0.0.1",
+    "cn.etetet.mathematics": "0.0.1",
+    "cn.etetet.router": "0.0.1",
+    "cn.etetet.console": "0.0.1",
+    "cn.etetet.unit": "0.0.1",
+    "cn.etetet.http": "0.0.1",
+    "cn.etetet.recast": "0.0.1",
+    "cn.etetet.numeric": "0.0.1",
+    "cn.etetet.move": "0.0.1",
+    "cn.etetet.watcher": "0.0.1",
+    "cn.etetet.db": "0.0.1",
+    "cn.etetet.aoi": "0.0.1",
+    "cn.etetet.ui": "0.0.1",
+    "cn.etetet.referencecollector": "0.0.1",
+    "cn.etetet.login": "0.0.1"
+  },
+  "publishConfig": 
+  { 
+    "registry": "https://npm.pkg.github.com/@ET-Packages" 
   }
 }
