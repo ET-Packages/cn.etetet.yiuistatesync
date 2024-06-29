@@ -12,11 +12,11 @@
         "YooAsset",
         "ET.SourceGeneratorAttribute",
         "ET.Init",
+        "ET.YIUIFramework",
+        "Unity.TextMeshPro",
         "ET.YooAssets",
         "ET.UI",
-        "ET.ReferenceCollector",
-        "ET.YIUIFramework",
-        "Unity.TextMeshPro"
+        "ET.ReferenceCollector"
     ],
     "includePlatforms": [
         "Editor"

@@ -9,10 +9,9 @@
         "YooAsset",
         "ET.SourceGeneratorAttribute",
         "ET.Init",
-        "ET.UI",
-        "ET.ReferenceCollector",
         "ET.YIUIFramework",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "ET.UI"
     ],
     "includePlatforms": [
         "Editor"
