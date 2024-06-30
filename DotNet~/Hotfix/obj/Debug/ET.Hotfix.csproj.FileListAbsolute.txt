@@ -51,3 +51,4 @@ D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\Hotfix\obj\
 D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\Hotfix\obj\Debug\refint\ET.Hotfix.dll
 D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\Hotfix\obj\Debug\ET.Hotfix.pdb
 D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\Hotfix\obj\Debug\ref\ET.Hotfix.dll
+D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\Hotfix\obj\Debug\ET.Hotfix.sourcelink.json

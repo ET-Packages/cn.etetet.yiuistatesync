@@ -97,3 +97,4 @@ D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\App\obj\Deb
 D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\App\obj\Debug\ET.App.pdb
 D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\App\obj\Debug\ET.App.genruntimeconfig.cache
 D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\App\obj\Debug\ref\ET.App.dll
+D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\App\obj\Debug\ET.App.sourcelink.json

@@ -15,7 +15,6 @@
         "ET.YIUIFramework",
         "Unity.TextMeshPro",
         "ET.YooAssets",
-        "ET.UI",
         "ET.ReferenceCollector"
     ],
     "includePlatforms": [

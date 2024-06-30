@@ -540,3 +540,4 @@ D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\Model\obj\D
 D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\Model\obj\Debug\refint\ET.Model.dll
 D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\Model\obj\Debug\ET.Model.pdb
 D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\Model\obj\Debug\ref\ET.Model.dll
+D:\Unity\ETProject\YIUI-ET9\Packages\cn.etetet.yiuistatesync\DotNet~\Model\obj\Debug\ET.Model.sourcelink.json
