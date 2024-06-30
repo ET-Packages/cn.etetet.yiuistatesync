@@ -94,22 +94,6 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Packages/cn.etetet.yiuigm/Assets/GameRes/YIUI/GM
-        CollectorGUID: 402b4d6cf6e56a34f86fb9b173431056
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: YIUIFilterRule
-        AssetTags: 
-        UserData: 
-      - CollectPath: Packages/cn.etetet.yiuitips/Assets/GameRes/YIUI/Tips
-        CollectorGUID: cb1c91773e8a26749a29d3d8d2283b09
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: YIUIFilterRule
-        AssetTags: 
-        UserData: 
       - CollectPath: Packages/cn.etetet.yiuistatesync/Assets/GameRes/YIUI
         CollectorGUID: 38aff9b4b3f3ca0459417ed8f1416685
         CollectorType: 0

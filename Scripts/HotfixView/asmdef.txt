@@ -9,7 +9,7 @@
         "ET.ModelView",
         "ET.YooAssets",
         "YooAsset",
-        "ET.UI",
+        "ET.YIUIFramework",
         "ET.ReferenceCollector",
         "ET.Init"
     ]

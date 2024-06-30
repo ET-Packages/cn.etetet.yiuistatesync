@@ -5,7 +5,7 @@
         "ET.Loader",
         "ET.Model",
         "YooAsset",
-        "ET.UI",
+        "ET.YIUIFramework",
         "ET.Init"
     ]
 }
