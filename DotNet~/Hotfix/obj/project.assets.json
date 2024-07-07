@@ -904,11 +904,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Hotfix\\ET.Hotfix.csproj",
+      "projectUniqueName": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Hotfix\\ET.Hotfix.csproj",
       "projectName": "ET.Hotfix",
-      "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Hotfix\\ET.Hotfix.csproj",
+      "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Hotfix\\ET.Hotfix.csproj",
       "packagesPath": "C:\\Users\\Lsy\\.nuget\\packages\\",
-      "outputPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Hotfix\\obj\\",
+      "outputPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Hotfix\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lsy\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -923,8 +923,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj": {
-              "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj"
+            "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj": {
+              "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj"
             }
           }
         }

@@ -10,7 +10,9 @@
         "ET.SourceGeneratorAttribute",
         "ET.UI",
         "Unity.Mathematics",
-        "YooAsset"
+        "YooAsset",
+        "ET.YIUIFramework",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [
         "Editor"
@@ -24,8 +26,5 @@
         "INITED"
     ],
     "versionDefines": [],
-    "noEngineReferences": false,
-    "optionalUnityReferences": [],
-    "additionalReferences": [],
-    "compilerOptions": ""
+    "noEngineReferences": false
 }

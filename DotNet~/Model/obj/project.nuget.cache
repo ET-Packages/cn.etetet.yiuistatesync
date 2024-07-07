@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GjvSiFlUrOYs2jIZf4m/BYd6P/vgia/uJJao59orj2FFTKmvutwwJt6zg0Ombq7zCOegMpfhM6JoWBJRx2wcXQ==",
+  "dgSpecHash": "ldgyO+BrXG3t/OyOQPFLPe9cf28WEoX0nBKZG4i/vhOcSR/B0Eb53l2i3kMdVNJ5i9FP/B/34VGW7I5U7mqctg==",
   "success": true,
-  "projectFilePath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj",
+  "projectFilePath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lsy\\.nuget\\packages\\commandlineparser\\2.9.1\\commandlineparser.2.9.1.nupkg.sha512",
     "C:\\Users\\Lsy\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

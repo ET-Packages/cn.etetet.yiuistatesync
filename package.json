@@ -1,6 +1,6 @@
 {
-  "name": "cn.etetet.statesync",
-  "displayName": "ET.StateSync",
+  "name": "cn.etetet.yiuistatesync",
+  "displayName": "ET.YIUI.StateSync",
   "version": "0.0.19",
   "unity": "2022.3",
   "description": "et statesync",
@@ -30,7 +30,6 @@
     "cn.etetet.watcher": "0.0.1",
     "cn.etetet.db": "0.0.1",
     "cn.etetet.aoi": "0.0.1",
-    "cn.etetet.ui": "0.0.2",
     "cn.etetet.referencecollector": "0.0.1",
     "cn.etetet.login": "0.0.1",
     "cn.etetet.netinner": "0.0.2"

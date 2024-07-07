@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\App\\ET.App.csproj": {}
+    "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\App\\ET.App.csproj": {}
   },
   "projects": {
-    "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.core\\DotNet~\\ET.Core\\ET.Core.csproj": {
+    "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.core\\DotNet~\\ET.Core\\ET.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.core\\DotNet~\\ET.Core\\ET.Core.csproj",
+        "projectUniqueName": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.core\\DotNet~\\ET.Core\\ET.Core.csproj",
         "projectName": "ET.Core",
-        "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.core\\DotNet~\\ET.Core\\ET.Core.csproj",
+        "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.core\\DotNet~\\ET.Core\\ET.Core.csproj",
         "packagesPath": "C:\\Users\\Lsy\\.nuget\\packages\\",
-        "outputPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.core\\DotNet~\\ET.Core\\obj\\",
+        "outputPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.core\\DotNet~\\ET.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lsy\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj": {
-                "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj"
+              "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj": {
+                "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.loader\\DotNet~\\Loader\\ET.Loader.csproj": {
+    "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.loader\\DotNet~\\Loader\\ET.Loader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.loader\\DotNet~\\Loader\\ET.Loader.csproj",
+        "projectUniqueName": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.loader\\DotNet~\\Loader\\ET.Loader.csproj",
         "projectName": "ET.Loader",
-        "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.loader\\DotNet~\\Loader\\ET.Loader.csproj",
+        "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.loader\\DotNet~\\Loader\\ET.Loader.csproj",
         "packagesPath": "C:\\Users\\Lsy\\.nuget\\packages\\",
-        "outputPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.loader\\DotNet~\\Loader\\obj\\",
+        "outputPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.loader\\DotNet~\\Loader\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lsy\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -105,8 +105,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.core\\DotNet~\\ET.Core\\ET.Core.csproj": {
-                "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.core\\DotNet~\\ET.Core\\ET.Core.csproj"
+              "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.core\\DotNet~\\ET.Core\\ET.Core.csproj": {
+                "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.core\\DotNet~\\ET.Core\\ET.Core.csproj"
               }
             }
           }
@@ -147,14 +147,14 @@
         }
       }
     },
-    "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.mathematics\\DotNet~\\ET.Mathematics.csproj": {
+    "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.mathematics\\DotNet~\\ET.Mathematics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.mathematics\\DotNet~\\ET.Mathematics.csproj",
+        "projectUniqueName": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.mathematics\\DotNet~\\ET.Mathematics.csproj",
         "projectName": "ET.Mathematics",
-        "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.mathematics\\DotNet~\\ET.Mathematics.csproj",
+        "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.mathematics\\DotNet~\\ET.Mathematics.csproj",
         "packagesPath": "C:\\Users\\Lsy\\.nuget\\packages\\",
-        "outputPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.mathematics\\DotNet~\\obj\\",
+        "outputPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.mathematics\\DotNet~\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lsy\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -204,14 +204,14 @@
         }
       }
     },
-    "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.recast\\DotNet~\\ET.Recast.csproj": {
+    "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.recast\\DotNet~\\ET.Recast.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.recast\\DotNet~\\ET.Recast.csproj",
+        "projectUniqueName": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.recast\\DotNet~\\ET.Recast.csproj",
         "projectName": "ET.Recast",
-        "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.recast\\DotNet~\\ET.Recast.csproj",
+        "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.recast\\DotNet~\\ET.Recast.csproj",
         "packagesPath": "C:\\Users\\Lsy\\.nuget\\packages\\",
-        "outputPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.recast\\DotNet~\\obj\\",
+        "outputPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.recast\\DotNet~\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lsy\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -261,14 +261,14 @@
         }
       }
     },
-    "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj": {
+    "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj",
+        "projectUniqueName": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj",
         "projectName": "ET.SourceGeneratorAttribute",
-        "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj",
+        "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj",
         "packagesPath": "C:\\Users\\Lsy\\.nuget\\packages\\",
-        "outputPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\obj\\",
+        "outputPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lsy\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -317,14 +317,14 @@
         }
       }
     },
-    "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\App\\ET.App.csproj": {
+    "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\App\\ET.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\App\\ET.App.csproj",
+        "projectUniqueName": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\App\\ET.App.csproj",
         "projectName": "ET.App",
-        "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\App\\ET.App.csproj",
+        "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\App\\ET.App.csproj",
         "packagesPath": "C:\\Users\\Lsy\\.nuget\\packages\\",
-        "outputPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\App\\obj\\",
+        "outputPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lsy\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -339,8 +339,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj": {
-                "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj"
+              "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj": {
+                "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj"
               }
             }
           }
@@ -375,14 +375,14 @@
         }
       }
     },
-    "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj": {
+    "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj",
+        "projectUniqueName": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj",
         "projectName": "ET.Model",
-        "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj",
+        "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\ET.Model.csproj",
         "packagesPath": "C:\\Users\\Lsy\\.nuget\\packages\\",
-        "outputPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\obj\\",
+        "outputPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.yiuistatesync\\DotNet~\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lsy\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -397,17 +397,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.loader\\DotNet~\\Loader\\ET.Loader.csproj": {
-                "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.loader\\DotNet~\\Loader\\ET.Loader.csproj"
+              "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.loader\\DotNet~\\Loader\\ET.Loader.csproj": {
+                "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.loader\\DotNet~\\Loader\\ET.Loader.csproj"
               },
-              "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.mathematics\\DotNet~\\ET.Mathematics.csproj": {
-                "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.mathematics\\DotNet~\\ET.Mathematics.csproj"
+              "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.mathematics\\DotNet~\\ET.Mathematics.csproj": {
+                "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.mathematics\\DotNet~\\ET.Mathematics.csproj"
               },
-              "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.recast\\DotNet~\\ET.Recast.csproj": {
-                "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.recast\\DotNet~\\ET.Recast.csproj"
+              "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.recast\\DotNet~\\ET.Recast.csproj": {
+                "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.recast\\DotNet~\\ET.Recast.csproj"
               },
-              "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj": {
-                "projectPath": "D:\\Unity\\ETProject\\YIUI-ET9\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj"
+              "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj": {
+                "projectPath": "D:\\Unity\\ETProject\\ET9_YIUI\\Packages\\cn.etetet.sourcegenerator\\DotNet~\\ET.SourceGeneratorAttribute\\ET.SourceGeneratorAttribute.csproj"
               }
             }
           }

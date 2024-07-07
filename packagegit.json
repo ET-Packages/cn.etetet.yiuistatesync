@@ -1,6 +1,6 @@
 {
-"Id": 10,
-"Name": "StateSync",
+"Id": 1001,
+"Name": "YIUI",
 "ScriptsReferences": {
   "ModelView": [
     "ET.Core",
@@ -8,7 +8,8 @@
     "ET.Loader",
     "ET.Model",
     "YooAsset",
-    "ET.UI",
+    "ET.YIUIFramework",
+    "Unity.TextMeshPro",
     "ET.Init"
   ],
   "Model": [
@@ -27,8 +28,9 @@
     "ET.ModelView",
     "ET.YooAssets",
     "YooAsset",
-    "ET.UI",
     "ET.ReferenceCollector",
+    "ET.YIUIFramework",
+    "Unity.TextMeshPro",
     "ET.Init"
   ],
   "Hotfix": [
