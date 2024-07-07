@@ -1,9 +1,9 @@
 {
   "name": "cn.etetet.yiuistatesync",
   "displayName": "ET.YIUI.StateSync",
-  "version": "0.0.19",
+  "version": "0.0.10",
   "unity": "2022.3",
-  "description": "et statesync",
+  "description": "YIUI \u7ea2\u70b9 >>> \u6587\u6863: https://lib9kmxvq7k.feishu.cn/wiki/ES7Gwz4EAiVGKSkotY5cRbTznuh",
   "author": {
     "name": "tanghai",
     "url": "https://github.com/egametang/ET"
@@ -32,7 +32,15 @@
     "cn.etetet.aoi": "0.0.1",
     "cn.etetet.referencecollector": "0.0.1",
     "cn.etetet.login": "0.0.1",
-    "cn.etetet.netinner": "0.0.2"
+    "cn.etetet.netinner": "0.0.2",
+    "cn.etetet.yiui": "0.0.10",
+    "cn.etetet.yiuiframework": "0.0.10",
+    "cn.etetet.yiuiloopscrollrectasync": "0.0.10",
+    "cn.etetet.yiuigm": "0.0.10",
+    "cn.etetet.yiuireddot": "0.0.10",
+    "cn.etetet.yiuitips": "0.0.10",
+    "cn.etetet.yiui3ddisplay": "0.0.10",
+    "cn.etetet.yiuieffect": "0.0.10"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@ET-Packages"
