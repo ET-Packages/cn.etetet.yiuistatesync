@@ -3,14 +3,14 @@
     "rootNamespace": "ET",
     "references": [
         "ET.Core",
-        "Unity.Mathematics",
+        "ET.Init",
         "ET.Loader",
         "ET.Model",
-        "YooAsset",
+        "ET.ReferenceCollector",
         "ET.SourceGeneratorAttribute",
-        "ET.Init",
-        "ET.YIUIFramework",
-        "Unity.TextMeshPro"
+        "ET.UI",
+        "Unity.Mathematics",
+        "YooAsset"
     ],
     "includePlatforms": [
         "Editor"
@@ -20,7 +20,9 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [],
+    "defineConstraints": [
+        "INITED"
+    ],
     "versionDefines": [],
     "noEngineReferences": false,
     "optionalUnityReferences": [],

@@ -1,47 +1,41 @@
 {
-  "name": "cn.etetet.yiuistatesync",
-  "displayName": "ET.YIUI.StateSync",
-  "version": "0.0.1",
+  "name": "cn.etetet.statesync",
+  "displayName": "ET.StateSync",
+  "version": "0.0.19",
   "unity": "2022.3",
-  "description": "YIUI 框架 >>> 文档: https://lib9kmxvq7k.feishu.cn/wiki/ES7Gwz4EAiVGKSkotY5cRbTznuh",
+  "description": "et statesync",
   "author": {
-    "name": "YIUI",
-    "url": "https://github.com/LiShengYang-yiyi/YIUI/tree/YIUI-ET9.0"
+    "name": "tanghai",
+    "url": "https://github.com/egametang/ET"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LiShengYang-yiyi/YIUI/tree/YIUI-ET9.0"
+    "url": "https://github.com/egametang/ET"
   },
   "relatedPackages": {},
   "dependencies": {
-    "cn.etetet.actorlocation": "0.0.1",
-    "cn.etetet.core": "0.0.6",
-    "cn.etetet.yooassets": "0.0.1",
-    "cn.etetet.loader": "0.0.3",
+    "cn.etetet.actorlocation": "0.0.4",
+    "cn.etetet.core": "0.0.11",
+    "cn.etetet.yooassets": "0.0.2",
+    "cn.etetet.loader": "0.0.4",
     "cn.etetet.demores": "0.0.1",
     "cn.etetet.mathematics": "0.0.1",
     "cn.etetet.router": "0.0.1",
     "cn.etetet.console": "0.0.1",
-    "cn.etetet.unit": "0.0.1",
+    "cn.etetet.unit": "0.0.2",
     "cn.etetet.http": "0.0.1",
     "cn.etetet.recast": "0.0.1",
-    "cn.etetet.numeric": "0.0.1",
-    "cn.etetet.move": "0.0.1",
+    "cn.etetet.numeric": "0.0.2",
+    "cn.etetet.move": "0.0.2",
     "cn.etetet.watcher": "0.0.1",
     "cn.etetet.db": "0.0.1",
     "cn.etetet.aoi": "0.0.1",
+    "cn.etetet.ui": "0.0.2",
     "cn.etetet.referencecollector": "0.0.1",
     "cn.etetet.login": "0.0.1",
-    "cn.etetet.yiuiframework": "0.0.1",
-    "cn.etetet.yiui3ddisplay": "0.0.1",
-    "cn.etetet.yiuieffect": "0.0.1",
-    "cn.etetet.yiuigm": "0.0.1",
-    "cn.etetet.yiuiloopscrollrectasync": "0.0.1",
-    "cn.etetet.yiuireddot": "0.0.1",
-    "cn.etetet.yiuitips": "0.0.1"
+    "cn.etetet.netinner": "0.0.2"
   },
-  "publishConfig": 
-  { 
-    "registry": "https://npm.pkg.github.com/@ET-Packages" 
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@ET-Packages"
   }
 }

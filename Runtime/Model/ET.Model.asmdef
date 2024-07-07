@@ -3,10 +3,10 @@
     "rootNamespace": "ET",
     "references": [
         "ET.Core",
-        "Unity.Mathematics",
-        "MemoryPack",
+        "ET.Recast",
         "ET.SourceGeneratorAttribute",
-        "ET.Recast"
+        "MemoryPack",
+        "Unity.Mathematics"
     ],
     "includePlatforms": [
         "Editor"
@@ -16,7 +16,9 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [],
+    "defineConstraints": [
+        "INITED"
+    ],
     "versionDefines": [],
     "noEngineReferences": true,
     "optionalUnityReferences": [],
