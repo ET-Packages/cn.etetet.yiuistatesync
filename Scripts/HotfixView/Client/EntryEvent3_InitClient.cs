@@ -16,10 +16,13 @@ namespace ET.Client
             root.AddComponent<CurrentScenesComponent>();
 
             {
-                //YIUI初始化
-                YIUIBindHelper.InternalGameGetUIBindVoFunc = YIUICodeGenerated.YIUIBindProvider.Get;
-                await root.AddComponent<YIUIMgrComponent>().Initialize();
-
+                var result = await root.AddComponent<YIUIMgrComponent>().Initialize();
+                if (!result)
+                {
+                    Log.Error("初始化UI失败");
+                    return;
+                }
+                //TODO 以后这些消息统一到YIUIMGR初始化成功后自行调用
                 //根据需求自行处理 在editor下自动打开  也可以根据各种外围配置 或者 GM等级打开
                 //if (Define.IsEditor) //这里默认都打开
                 {
