@@ -13,6 +13,7 @@ using TMPro;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using YooAsset.Editor;
 
 namespace YIUIFramework.Editor
 {
@@ -63,6 +64,50 @@ namespace YIUIFramework.Editor
             UnityTipsHelper.Show(tips);
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
+        }
+
+        [Button]
+        private void YooAssetSetting()
+        {
+            var yooSetting = AssetBundleCollectorSettingData.Setting;
+            if (yooSetting == null)
+            {
+                Debug.LogError($"没有找到yoo设置");
+                return;
+            }
+
+            yooSetting.UniqueBundleName = true;
+            var defaultPackage = yooSetting.GetPackage("DefaultPackage");
+            if (defaultPackage == null)
+            {
+                Debug.LogError($"没有找到默认包 DefaultPackage");
+                return;
+            }
+
+            defaultPackage.EnableAddressable = true; //YIUI Demo必须开启可寻址
+
+            var                       yiuiGroupName = "YIUI";
+            AssetBundleCollectorGroup yiuiGroup     = default;
+            foreach (var group in defaultPackage.Groups)
+            {
+                if (group.GroupName == yiuiGroupName)
+                {
+                    yiuiGroup = group;
+                    break;
+                }
+            }
+
+            if (yiuiGroup == null)
+            {
+                yiuiGroup = new AssetBundleCollectorGroup
+                            {
+                                GroupName = yiuiGroupName
+                            };
+                defaultPackage.Groups.Add(yiuiGroup);
+            }
+            
+            //TODO 添加需要的设置
+            
         }
 
         [BoxGroup("  ")]
