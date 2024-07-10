@@ -1,4 +1,5 @@
-﻿namespace ET.Client
+
+namespace ET.Client
 {
 	[Event(SceneType.StateSync)]
 	public class AppStartInitFinish_CreateLoginUI: AEvent<Scene, AppStartInitFinish>
