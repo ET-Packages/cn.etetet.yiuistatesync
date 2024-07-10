@@ -7,7 +7,9 @@
 #if UNITY_EDITOR
 using System;
 using System.IO;
+using System.Reflection;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -44,8 +46,8 @@ namespace YIUIFramework.Editor
         {
         }
 
-        [Button("切换Demo", 50)]
-        [GUIColor(0f, 0.5f, 1f)]
+        [BoxGroup(" ")]
+        [Button("切换Demo", 50), GUIColor(0.4f, 0.8f, 1)]
         private void Switch()
         {
             var tips = "";
@@ -61,6 +63,33 @@ namespace YIUIFramework.Editor
             UnityTipsHelper.Show(tips);
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
+        }
+
+        [BoxGroup("  ")]
+        [Button("设置TMP中文字体", 40)]
+        private void SetTMP()
+        {
+            var tmpSettings = Resources.Load<TMP_Settings>("TMP Settings");
+            if (tmpSettings == null)
+            {
+                Debug.LogError($"没有找到TMP设置 请手动设置字体");
+                return;
+            }
+
+            TMP_FontAsset newDefaultFontAsset = Resources.Load<TMP_FontAsset>("Fonts/SourceHanSansSC-VF SDF");
+            if (newDefaultFontAsset == null)
+            {
+                Debug.LogError($"没有找到新的默认字体 请检查");
+                return;
+            }
+
+            Type      settingsType          = typeof(TMP_Settings);
+            FieldInfo defaultFontAssetField = settingsType.GetField("m_defaultFontAsset", BindingFlags.NonPublic | BindingFlags.Instance);
+
+            if (defaultFontAssetField != null && newDefaultFontAsset != null)
+            {
+                defaultFontAssetField.SetValue(tmpSettings, newDefaultFontAsset);
+            }
         }
 
         private bool SwitchToScene()
