@@ -1,45 +1,4 @@
 {
-"Id": 1001,
-"Name": "YIUI",
-"ScriptsReferences": {
-  "ModelView": [
-    "ET.Core",
-    "Unity.Mathematics",
-    "ET.Loader",
-    "ET.Model",
-    "YooAsset",
-    "ET.YIUIFramework",
-    "Unity.TextMeshPro",
-    "ET.Init"
-  ],
-  "Model": [
-    "ET.Core",
-    "Unity.Mathematics",
-    "MemoryPack",
-    "ET.Recast"
-  ],
-  "HotfixView": [
-    "ET.Core",
-    "Unity.Mathematics",
-    "ET.Loader",
-    "MemoryPack",
-    "ET.Model",
-    "ET.Hotfix",
-    "ET.ModelView",
-    "ET.YooAssets",
-    "YooAsset",
-    "ET.ReferenceCollector",
-    "ET.YIUIFramework",
-    "Unity.TextMeshPro",
-    "ET.Init"
-  ],
-  "Hotfix": [
-    "ET.Core",
-    "Unity.Mathematics",
-    "ET.Loader",
-    "MemoryPack",
-    "ET.Model",
-    "ET.Recast"
-  ]
-}
+    "Id": 1001,
+    "Name": "YIUI",
 }
