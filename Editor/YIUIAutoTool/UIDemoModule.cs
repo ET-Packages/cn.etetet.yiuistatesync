@@ -8,9 +8,7 @@
 using System;
 using System.IO;
 using System.Reflection;
-using ET;
 using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Editor;
 using TMPro;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -52,6 +50,8 @@ namespace YIUIFramework.Editor
         private void Switch()
         {
             var tips = "";
+            ChangeETCoreFile();
+            ChageSourceGeneratorDll();
             if (SyncYooAssetSetting() && CopyET() && ChangeFile() && SwitchToScene())
             {
                 tips = $"成功切换Demo >> {(OpenYIUI ? "YIUI" : "ET")} \n记得编译ET.sln工程!!!";
@@ -205,10 +205,10 @@ namespace YIUIFramework.Editor
         /// </summary>
         private bool CopyET()
         {
-            var    et                  = "ET.sln";
-            var    packageName         = OpenYIUI ? YIUIPackageName : ETPackageName;
-            string sourceFilePath      = $"{Application.dataPath}/../Packages/cn.etetet.{packageName}/{et}";
-            string destinationFilePath = $"{Application.dataPath}/../{et}";
+            var et                  = "ET.sln";
+            var packageName         = OpenYIUI ? YIUIPackageName : ETPackageName;
+            var sourceFilePath      = $"{Application.dataPath}/../Packages/cn.etetet.{packageName}/{et}";
+            var destinationFilePath = $"{Application.dataPath}/../{et}";
 
             try
             {
@@ -233,13 +233,13 @@ namespace YIUIFramework.Editor
         /// </summary>
         private bool ChangeFile()
         {
-            string sourceFilePath = $"{Application.dataPath}/../Packages/cn.etetet.{YIUIPackageName}/Scripts/HotfixView/Client";
+            var sourceFilePath = $"{Application.dataPath}/../Packages/cn.etetet.{YIUIPackageName}/Scripts/HotfixView/Client";
 
-            string[] csFilesInA = Directory.GetFiles(sourceFilePath, "*.cs", SearchOption.AllDirectories);
+            var csFilesInA = Directory.GetFiles(sourceFilePath, "*.cs", SearchOption.AllDirectories);
 
-            foreach (string fileInA in csFilesInA)
+            foreach (var fileInA in csFilesInA)
             {
-                string fileInB = fileInA.Replace("yiuistatesync", "statesync");
+                var fileInB = fileInA.Replace("yiuistatesync", "statesync");
                 if (!ChangeFile(fileInA, OpenYIUI))
                 {
                     return false;
@@ -258,8 +258,8 @@ namespace YIUIFramework.Editor
         {
             if (File.Exists(path))
             {
-                string fileName    = Path.GetFileName(path);
-                string fileContent = File.ReadAllText(path);
+                var fileName    = Path.GetFileName(path);
+                var fileContent = File.ReadAllText(path);
 
                 bool startsWithSlashStar = fileContent.StartsWith("/*");
                 bool endsWithStarSlash   = fileContent.EndsWith("*/");
@@ -318,6 +318,95 @@ namespace YIUIFramework.Editor
 
             return true;
         }
+
+        #region 额外设置 等ET改以后就不用改这个了
+
+        #region 改文件
+
+        private void ChangeETCoreFile()
+        {
+            var filePath = $"{Application.dataPath}/../Packages/cn.etetet.core/Runtime/Fiber/EntitySystem.cs";
+            var find     = "public class EntitySystem";
+            var replace  = "public partial class EntitySystem";
+            ReplaceStringInFile(filePath, find, replace);
+
+            var find2    = "private Queue<EntityRef<Entity>>";
+            var replace2 = "public Queue<EntityRef<Entity>>";
+            ReplaceStringInFile(filePath, find2, replace2);
+
+            var filePath3 = $"{Application.dataPath}/../Packages/cn.etetet.core/Runtime/World/EventSystem/EventSystem.cs";
+            var find3     = "public class EventSystem";
+            var replace3  = "public partial class EventSystem";
+            ReplaceStringInFile(filePath3, find3, replace3);
+        }
+
+        private static void ReplaceStringInFile(string filePath, string find, string replace)
+        {
+            if (!File.Exists(filePath))
+            {
+                Debug.LogError($"没找到这个文件 {filePath}");
+                return;
+            }
+
+            try
+            {
+                var  lines      = File.ReadAllLines(filePath);
+                bool isModified = false;
+
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    if (lines[i].Contains(find))
+                    {
+                        lines[i]   = lines[i].Replace(find, replace);
+                        isModified = true;
+                        break;
+                    }
+                }
+
+                if (isModified)
+                {
+                    File.WriteAllLines(filePath, lines);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"写入文件错误 {ex}");
+            }
+        }
+
+        #endregion
+
+        #region 改分析器
+
+        private void ChageSourceGeneratorDll()
+        {
+            var sourceFilePath      = $"{Application.dataPath}/../Packages/cn.etetet.yiuistatesync/Editor/ET.SourceGenerator.yiui";
+            var destinationFilePath = $"{Application.dataPath}/../Packages/cn.etetet.sourcegenerator/ET.SourceGenerator.dll";
+
+            if (!File.Exists(sourceFilePath))
+            {
+                Debug.LogError($"没找到这个文件 {sourceFilePath}");
+                return;
+            }
+
+            try
+            {
+                if (File.Exists(destinationFilePath))
+                {
+                    File.Delete(destinationFilePath);
+                }
+
+                File.Copy(sourceFilePath, destinationFilePath, true);
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"写入文件错误 {ex}");
+            }
+        }
+
+        #endregion
+
+        #endregion
     }
 }
 #endif
