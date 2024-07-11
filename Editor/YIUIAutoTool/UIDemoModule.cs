@@ -8,7 +8,9 @@
 using System;
 using System.IO;
 using System.Reflection;
+using ET;
 using Sirenix.OdinInspector;
+using Sirenix.OdinInspector.Editor;
 using TMPro;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -20,8 +22,6 @@ namespace YIUIFramework.Editor
     [YIUIAutoMenu("Demo", 1000000)]
     internal class UIDemoModule : BaseYIUIToolModule
     {
-        //YOOasset的设置 这边写一个配置 然后那边重新设置一下
-
         private const string YIUIPackageName     = "yiuistatesync";
         private const string ETPackageName       = "statesync";
         private const string ETLoaderPackageName = "loader";
@@ -52,7 +52,7 @@ namespace YIUIFramework.Editor
         private void Switch()
         {
             var tips = "";
-            if (CopyET() && ChangeFile() && SwitchToScene())
+            if (SyncYooAssetSetting() && CopyET() && ChangeFile() && SwitchToScene())
             {
                 tips = $"成功切换Demo >> {(OpenYIUI ? "YIUI" : "ET")} \n记得编译ET.sln工程!!!";
             }
@@ -62,52 +62,7 @@ namespace YIUIFramework.Editor
             }
 
             UnityTipsHelper.Show(tips);
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
-        }
-
-        [Button]
-        private void YooAssetSetting()
-        {
-            var yooSetting = AssetBundleCollectorSettingData.Setting;
-            if (yooSetting == null)
-            {
-                Debug.LogError($"没有找到yoo设置");
-                return;
-            }
-
-            yooSetting.UniqueBundleName = true;
-            var defaultPackage = yooSetting.GetPackage("DefaultPackage");
-            if (defaultPackage == null)
-            {
-                Debug.LogError($"没有找到默认包 DefaultPackage");
-                return;
-            }
-
-            defaultPackage.EnableAddressable = true; //YIUI Demo必须开启可寻址
-
-            var                       yiuiGroupName = "YIUI";
-            AssetBundleCollectorGroup yiuiGroup     = default;
-            foreach (var group in defaultPackage.Groups)
-            {
-                if (group.GroupName == yiuiGroupName)
-                {
-                    yiuiGroup = group;
-                    break;
-                }
-            }
-
-            if (yiuiGroup == null)
-            {
-                yiuiGroup = new AssetBundleCollectorGroup
-                            {
-                                GroupName = yiuiGroupName
-                            };
-                defaultPackage.Groups.Add(yiuiGroup);
-            }
-            
-            //TODO 添加需要的设置
-            
+            YIUIAutoTool.CloseWindowRefresh();
         }
 
         [BoxGroup("  ")]
@@ -137,6 +92,100 @@ namespace YIUIFramework.Editor
             }
         }
 
+        [BoxGroup("   ")]
+        [Button("打开YooAsset设置", 40)]
+        private void SetYooAssetSetting()
+        {
+            Type      type      = typeof(AssetBundleCollectorSettingData);
+            FieldInfo fieldInfo = type.GetField("_setting", BindingFlags.NonPublic | BindingFlags.Static);
+            if (fieldInfo != null)
+            {
+                //根据Demo类型可以打开不同的YooAsset设置
+                if (OpenYIUI)
+                {
+                    var tempSetting = ScriptableObject.CreateInstance<AssetBundleCollectorSetting>();
+                    var yiuiSetting = SettingLoader.LoadSettingData<YIUIYooAssetSetting>();
+                    if (yiuiSetting == null)
+                    {
+                        Debug.LogError($"没有找到YIUIYooAssetSetting");
+                        return;
+                    }
+
+                    tempSetting.Packages = yiuiSetting.Packages;
+                    fieldInfo.SetValue(null, tempSetting);
+                }
+                else
+                {
+                    fieldInfo.SetValue(null, null);
+                }
+
+                YIUIAutoTool.CloseWindowRefresh();
+                EditorApplication.ExecuteMenuItem("YooAsset/AssetBundle Collector");
+            }
+            else
+            {
+                Debug.LogError($"没有找到AssetBundleCollectorSettingData._setting");
+            }
+        }
+
+        /// <summary>
+        /// 同步YooAsset设置
+        /// </summary>
+        private bool SyncYooAssetSetting()
+        {
+            var yooSetting = AssetBundleCollectorSettingData.Setting;
+            if (yooSetting == null)
+            {
+                Debug.LogError($"没有找到yoo设置");
+                return false;
+            }
+
+            var yiuiSetting = SettingLoader.LoadSettingData<YIUIYooAssetSetting>();
+            if (yiuiSetting == null)
+            {
+                Debug.LogError($"没有找到YIUIYooAssetSetting");
+                return false;
+            }
+
+            var yiuiDefaultPackage = yiuiSetting.GetPackage("DefaultPackage");
+            if (yiuiDefaultPackage == null)
+            {
+                Debug.LogError($"yiuiSetting 没有找到默认包 DefaultPackage");
+                return false;
+            }
+
+            var defaultPackage = yooSetting.GetPackage("DefaultPackage");
+            if (defaultPackage == null)
+            {
+                Debug.LogError($"yooSetting 没有找到默认包 DefaultPackage");
+                return false;
+            }
+
+            yooSetting.UniqueBundleName      = true;
+            defaultPackage.EnableAddressable = true; //YIUI Demo必须开启可寻址
+
+            var                       yiuiGroupName = "YIUI";
+            AssetBundleCollectorGroup yiuiGroup     = default;
+            foreach (var group in defaultPackage.Groups)
+            {
+                if (group.GroupName == yiuiGroupName)
+                {
+                    yiuiGroup = group;
+                    break;
+                }
+            }
+
+            if (yiuiGroup != null)
+                defaultPackage.Groups.Remove(yiuiGroup);
+
+            defaultPackage.Groups.AddRange(yiuiDefaultPackage.Groups);
+
+            return true;
+        }
+
+        /// <summary>
+        /// 场景切换
+        /// </summary>
         private bool SwitchToScene()
         {
             var scenePath = $"Packages/cn.etetet.{(OpenYIUI ? YIUIPackageName : ETLoaderPackageName)}/Scenes/Init.unity";
