@@ -4,11 +4,11 @@
 // Data: 2023年2月12日
 //------------------------------------------------------------
 
-#if UNITY_EDITOR
 using System;
 using System.IO;
 using System.Reflection;
 using Sirenix.OdinInspector;
+using Sirenix.OdinInspector.Editor;
 using TMPro;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -17,9 +17,30 @@ using YooAsset.Editor;
 
 namespace YIUIFramework.Editor
 {
-    [YIUIAutoMenu("Demo", 1000000)]
-    internal class UIDemoModule : BaseYIUIToolModule
+    public class YIUIDemoWindow : OdinEditorWindow
     {
+        [MenuItem("Tools/YIUI Demo")]
+        private static void OpenWindow()
+        {
+            var window = GetWindow<YIUIDemoWindow>();
+            window.Show();
+        }
+
+        //[MenuItem("Tools/关闭 YIUI Demo")]
+        //错误时使用的 面板出现了错误 会导致如何都打不开 就需要先关闭
+        private static void CloseWindow()
+        {
+            GetWindow<YIUIDemoWindow>().Close();
+        }
+
+        //关闭后刷新资源
+        public static void CloseWindowRefresh()
+        {
+            CloseWindow();
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+        }
+
         private const string YIUIPackageName     = "yiuistatesync";
         private const string ETPackageName       = "statesync";
         private const string ETLoaderPackageName = "loader";
@@ -37,14 +58,6 @@ namespace YIUIFramework.Editor
 
         private bool OpenYIUI => DemoType == EDemoType.YIUI;
 
-        public override void Initialize()
-        {
-        }
-
-        public override void OnDestroy()
-        {
-        }
-
         [BoxGroup(" ")]
         [Button("切换Demo", 50), GUIColor(0.4f, 0.8f, 1)]
         private void Switch()
@@ -61,8 +74,9 @@ namespace YIUIFramework.Editor
                 tips = $"切换Demo 失败 请检查";
             }
 
-            UnityTipsHelper.Show(tips);
-            YIUIAutoTool.CloseWindowRefresh();
+            EditorUtility.DisplayDialog("提示", tips, "确认");
+            EditorApplication.ExecuteMenuItem("ET/Loader/UpdateScriptsReferences");
+            CloseWindowRefresh();
         }
 
         [BoxGroup("  ")]
@@ -90,6 +104,9 @@ namespace YIUIFramework.Editor
             {
                 defaultFontAssetField.SetValue(tmpSettings, newDefaultFontAsset);
             }
+
+            EditorUtility.DisplayDialog("提示", "设置TMP字体完毕", "确认");
+            CloseWindowRefresh();
         }
 
         [BoxGroup("   ")]
@@ -119,7 +136,7 @@ namespace YIUIFramework.Editor
                     fieldInfo.SetValue(null, null);
                 }
 
-                YIUIAutoTool.CloseWindowRefresh();
+                CloseWindowRefresh();
                 EditorApplication.ExecuteMenuItem("YooAsset/AssetBundle Collector");
             }
             else
@@ -214,7 +231,7 @@ namespace YIUIFramework.Editor
             {
                 if (!File.Exists(sourceFilePath))
                 {
-                    UnityTipsHelper.Show($"{et} 源文件不存在。{sourceFilePath}");
+                    EditorUtility.DisplayDialog("提示", $"{et} 源文件不存在。{sourceFilePath}", "确认");
                     return false;
                 }
 
@@ -222,7 +239,7 @@ namespace YIUIFramework.Editor
             }
             catch (Exception ex)
             {
-                Debug.LogError($"复制过程中发生错误: {ex.Message}");
+                Debug.LogError($"复制ET.sln过程中失败 注意请关闭IDE编辑器使用 {ex}");
             }
 
             return true;
@@ -309,11 +326,6 @@ namespace YIUIFramework.Editor
                     Debug.LogError($"文件 {fileName} 写入失败 {e}。");
                     return false;
                 }
-            }
-            else
-            {
-                Debug.LogError($"文件 {path} 在路径中不存在");
-                return false;
             }
 
             return true;
@@ -409,4 +421,3 @@ namespace YIUIFramework.Editor
         #endregion
     }
 }
-#endif
