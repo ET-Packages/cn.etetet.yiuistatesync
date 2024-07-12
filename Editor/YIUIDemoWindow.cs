@@ -19,7 +19,7 @@ namespace YIUIFramework.Editor
 {
     public class YIUIDemoWindow : OdinEditorWindow
     {
-        [MenuItem("Tools/YIUI Demo")]
+        [MenuItem("ET/YIUI Demo")]
         private static void OpenWindow()
         {
             var window = GetWindow<YIUIDemoWindow>();
