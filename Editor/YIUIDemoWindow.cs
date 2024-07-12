@@ -75,7 +75,7 @@ namespace YIUIFramework.Editor
             }
 
             EditorUtility.DisplayDialog("提示", tips, "确认");
-            EditorApplication.ExecuteMenuItem("ET/Loader/UpdateScriptsReferences");
+            ScriptsReferencesHelper.Run();
             CloseWindowRefresh();
         }
 
