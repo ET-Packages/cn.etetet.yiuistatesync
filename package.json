@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "cn.etetet.yiuistatesync",
   "displayName": "ET.YIUI.StateSync",
   "version": "0.0.11",
@@ -14,15 +14,15 @@
   },
   "relatedPackages": {},
   "dependencies": {
-	"cn.etetet.statesync": "0.0.28",
+    "cn.etetet.statesync": "0.0.28",
     "cn.etetet.yiui": "0.0.10",
     "cn.etetet.yiuiframework": "0.0.11",
-	"cn.etetet.yiuiyooassets": "0.0.10",
+    "cn.etetet.yiuiyooassets": "0.0.10",
     "cn.etetet.yiuiloopscrollrectasync": "0.0.10",
     "cn.etetet.yiuigm": "0.0.10",
     "cn.etetet.yiuireddot": "0.0.10",
     "cn.etetet.yiuitips": "0.0.10",
-	"cn.etetet.yiuilocalization": "0.0.10",
+    "cn.etetet.yiuilocalization": "0.0.10",
     "cn.etetet.yiui3ddisplay": "0.0.10",
     "cn.etetet.yiuieffect": "0.0.10"
   },
