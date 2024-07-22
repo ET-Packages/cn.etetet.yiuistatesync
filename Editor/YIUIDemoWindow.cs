@@ -38,7 +38,9 @@ namespace YIUIFramework.Editor
         {
             CloseWindow();
             AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
+
+            //AssetDatabase.Refresh();//下面的刷新更NB
+            EditorApplication.ExecuteMenuItem("Assets/Refresh");
         }
 
         private const string YIUIPackageName     = "yiuistatesync";
@@ -75,8 +77,8 @@ namespace YIUIFramework.Editor
             }
 
             EditorUtility.DisplayDialog("提示", tips, "确认");
-            ScriptsReferencesHelper.Run();
             CloseWindowRefresh();
+            ScriptsReferencesHelper.Run();
         }
 
         [BoxGroup("  ")]
@@ -197,6 +199,7 @@ namespace YIUIFramework.Editor
 
             defaultPackage.Groups.AddRange(yiuiDefaultPackage.Groups);
 
+            EditorUtility.SetDirty(yooSetting);
             return true;
         }
 
