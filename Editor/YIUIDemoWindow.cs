@@ -131,6 +131,7 @@ namespace YIUIFramework.Editor
                         return;
                     }
 
+                    EditorUtility.SetDirty(yiuiSetting);
                     tempSetting.Packages = yiuiSetting.Packages;
                     fieldInfo.SetValue(null, tempSetting);
                 }
