@@ -46,6 +46,7 @@ namespace YIUIFramework.Editor
         private const string YIUIPackageName     = "yiuistatesync";
         private const string ETPackageName       = "statesync";
         private const string ETLoaderPackageName = "loader";
+        private const string UIProjectResPath    = "Assets/GameRes/YIUI";
 
         public enum EDemoType
         {
@@ -147,6 +148,16 @@ namespace YIUIFramework.Editor
             }
         }
 
+        private void CreateUIProjectRes()
+        {
+            var path = $"{Application.dataPath}/../{UIProjectResPath}";
+
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+        }
+
         /// <summary>
         /// 同步YooAsset设置
         /// </summary>
@@ -199,6 +210,7 @@ namespace YIUIFramework.Editor
 
             defaultPackage.Groups.AddRange(yiuiDefaultPackage.Groups);
 
+            CreateUIProjectRes();
             EditorUtility.SetDirty(yooSetting);
             return true;
         }
