@@ -1,7 +1,7 @@
 ﻿{
   "name": "cn.etetet.yiuistatesync",
   "displayName": "ET.YIUI.StateSync",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "unity": "2022.3",
   "description": "YIUI 框架 >>> 文档: https://lib9kmxvq7k.feishu.cn/wiki/ES7Gwz4EAiVGKSkotY5cRbTznuh",
   "author": {
@@ -15,6 +15,7 @@
   "relatedPackages": {},
   "dependencies": {
     "cn.etetet.statesync": "0.0.28",
+    "cn.etetet.packagemanager": "0.0.3",
     "cn.etetet.yiui": "0.0.20",
     "cn.etetet.yiuiframework": "0.0.20",
     "cn.etetet.yiuiyooassets": "0.0.20",
