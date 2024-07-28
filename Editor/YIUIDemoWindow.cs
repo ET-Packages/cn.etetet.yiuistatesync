@@ -19,6 +19,13 @@ namespace YIUIFramework.Editor
 {
     public class YIUIDemoWindow : OdinEditorWindow
     {
+        [Button("YIUI运行指南", 30, Icon = SdfIconType.Link45deg, IconAlignment = IconAlignment.LeftOfText)]
+        [PropertyOrder(-99999)]
+        public void OpenDocument()
+        {
+            Application.OpenURL("https://lib9kmxvq7k.feishu.cn/wiki/H7SmwXozNiliN3kahZFcqQxqnub");
+        }
+
         [MenuItem("ET/YIUI Demo")]
         private static void OpenWindow()
         {
