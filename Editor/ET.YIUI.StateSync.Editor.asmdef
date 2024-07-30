@@ -2,8 +2,8 @@
     "name": "ET.YIUI.StateSync.Editor",
     "rootNamespace": "",
     "references": [
-        "ET.YooAsset",
-        "ET.YooAsset.Editor",
+        "ET.YooAssets",
+        "ET.YooAssets.Editor",
         "Unity.TextMeshPro"
     ],
     "includePlatforms": [
