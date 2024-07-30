@@ -74,7 +74,6 @@ namespace YIUIFramework.Editor
         {
             var tips = "";
             ChangeETCoreFile();
-            ChageSourceGeneratorDll();
             if (SyncYooAssetSetting() && CopyET() && ChangeFile() && SwitchToScene())
             {
                 tips = $"成功切换Demo >> {(OpenYIUI ? "YIUI" : "ET")} \n记得编译ET.sln工程!!!";
@@ -402,36 +401,6 @@ namespace YIUIFramework.Editor
                 {
                     File.WriteAllLines(filePath, lines);
                 }
-            }
-            catch (Exception ex)
-            {
-                Debug.LogError($"写入文件错误 {ex}");
-            }
-        }
-
-        #endregion
-
-        #region 改分析器
-
-        private void ChageSourceGeneratorDll()
-        {
-            var sourceFilePath      = $"{Application.dataPath}/../Packages/cn.etetet.yiuistatesync/Editor/ET.SourceGenerator.yiui";
-            var destinationFilePath = $"{Application.dataPath}/../Packages/cn.etetet.sourcegenerator/ET.SourceGenerator.dll";
-
-            if (!File.Exists(sourceFilePath))
-            {
-                Debug.LogError($"没找到这个文件 {sourceFilePath}");
-                return;
-            }
-
-            try
-            {
-                if (File.Exists(destinationFilePath))
-                {
-                    File.Delete(destinationFilePath);
-                }
-
-                File.Copy(sourceFilePath, destinationFilePath, true);
             }
             catch (Exception ex)
             {
