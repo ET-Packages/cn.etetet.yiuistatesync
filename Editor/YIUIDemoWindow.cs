@@ -360,18 +360,10 @@ namespace YIUIFramework.Editor
         private void ChangeETCoreFile()
         {
             var filePath = $"{Application.dataPath}/../Packages/cn.etetet.core/Runtime/Fiber/EntitySystem.cs";
-            var find     = "public class EntitySystem";
-            var replace  = "public partial class EntitySystem";
-            ReplaceStringInFile(filePath, find, replace);
-
+            
             var find2    = "private Queue<EntityRef<Entity>>";
             var replace2 = "public Queue<EntityRef<Entity>>";
             ReplaceStringInFile(filePath, find2, replace2);
-
-            var filePath3 = $"{Application.dataPath}/../Packages/cn.etetet.core/Runtime/World/EventSystem/EventSystem.cs";
-            var find3     = "public class EventSystem";
-            var replace3  = "public partial class EventSystem";
-            ReplaceStringInFile(filePath3, find3, replace3);
         }
 
         private static void ReplaceStringInFile(string filePath, string find, string replace)
