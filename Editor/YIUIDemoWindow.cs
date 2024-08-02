@@ -73,7 +73,6 @@ namespace YIUIFramework.Editor
         private void Switch()
         {
             var tips = "";
-            ChangeETCoreFile();
             if (SyncYooAssetSetting() && CopyET() && ChangeFile() && SwitchToScene())
             {
                 tips = $"成功切换Demo >> {(OpenYIUI ? "YIUI" : "ET")} \n记得编译ET.sln工程!!!";
@@ -352,56 +351,5 @@ namespace YIUIFramework.Editor
 
             return true;
         }
-
-        #region 额外设置 等ET改以后就不用改这个了
-
-        #region 改文件
-
-        private void ChangeETCoreFile()
-        {
-            var filePath = $"{Application.dataPath}/../Packages/cn.etetet.core/Runtime/Fiber/EntitySystem.cs";
-            
-            var find2    = "private Queue<EntityRef<Entity>>";
-            var replace2 = "public Queue<EntityRef<Entity>>";
-            ReplaceStringInFile(filePath, find2, replace2);
-        }
-
-        private static void ReplaceStringInFile(string filePath, string find, string replace)
-        {
-            if (!File.Exists(filePath))
-            {
-                Debug.LogError($"没找到这个文件 {filePath}");
-                return;
-            }
-
-            try
-            {
-                var  lines      = File.ReadAllLines(filePath);
-                bool isModified = false;
-
-                for (int i = 0; i < lines.Length; i++)
-                {
-                    if (lines[i].Contains(find))
-                    {
-                        lines[i]   = lines[i].Replace(find, replace);
-                        isModified = true;
-                        break;
-                    }
-                }
-
-                if (isModified)
-                {
-                    File.WriteAllLines(filePath, lines);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.LogError($"写入文件错误 {ex}");
-            }
-        }
-
-        #endregion
-
-        #endregion
     }
 }
