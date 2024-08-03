@@ -1,7 +1,7 @@
 ﻿{
   "name": "cn.etetet.yiuistatesync",
   "displayName": "ET.YIUI.StateSync",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "unity": "2022.3",
   "category": "Demo/YIUI|UI/YIUI",
   "description": "YIUI Demo >>> 文档: https://lib9kmxvq7k.feishu.cn/wiki/ES7Gwz4EAiVGKSkotY5cRbTznuh",
@@ -15,18 +15,18 @@
   },
   "relatedPackages": {},
   "dependencies": {
-    "cn.etetet.statesync": "0.0.41",
+    "cn.etetet.statesync": "0.0.44",
     "cn.etetet.packagemanager": "0.0.8",
-    "cn.etetet.yiui": "0.1.0",
-    "cn.etetet.yiuiframework": "0.1.0",
-    "cn.etetet.yiuiyooassets": "0.1.0",
-    "cn.etetet.yiuiloopscrollrectasync": "0.1.0",
-    "cn.etetet.yiuigm": "0.1.0",
-    "cn.etetet.yiuireddot": "0.1.0",
-    "cn.etetet.yiuitips": "0.1.0",
-    "cn.etetet.yiuilocalization": "0.1.0",
-    "cn.etetet.yiui3ddisplay": "0.1.0",
-    "cn.etetet.yiuieffect": "0.1.0"
+    "cn.etetet.yiui": "0.2.0",
+    "cn.etetet.yiuiframework": "0.2.0",
+    "cn.etetet.yiuiyooassets": "0.2.0",
+    "cn.etetet.yiuiloopscrollrectasync": "0.2.0",
+    "cn.etetet.yiuigm": "0.2.0",
+    "cn.etetet.yiuireddot": "0.2.0",
+    "cn.etetet.yiuitips": "0.2.0",
+    "cn.etetet.yiuilocalization": "0.2.0",
+    "cn.etetet.yiui3ddisplay": "0.2.0",
+    "cn.etetet.yiuieffect": "0.2.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@ET-Packages"
