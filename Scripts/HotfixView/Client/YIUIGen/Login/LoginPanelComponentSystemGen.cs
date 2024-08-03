@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using YIUIFramework;
 using System.Collections.Generic;
@@ -38,7 +38,7 @@ namespace ET.Client
             self.UIPanel.CachePanelTime = 10;
 
             self.u_EventLogin = self.UIBase.EventTable.FindEvent<UITaskEventP0>("u_EventLogin");
-            self.u_EventLoginHandle = self.u_EventLogin.Add(self.OnEventLoginAction);
+            self.u_EventLoginHandle = self.u_EventLogin.Add(self,"OnEventLoginInvoke");
 
         }
     }

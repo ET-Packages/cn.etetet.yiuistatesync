@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using YIUIFramework;
 using System.Collections.Generic;
@@ -27,11 +27,13 @@ namespace ET.Client
 
         #region YIUIEvent开始
 
-        private static async ETTask OnEventLoginAction(this LoginPanelComponent self)
+        [YIUIInvoke]
+        private static async ETTask OnEventLoginInvoke(this LoginPanelComponent self)
         {
             Log.Info($"登录");
             GlobalComponent globalComponent = self.Root().GetComponent<GlobalComponent>();
-            await LoginHelper.Login(self.Root(),
+            await LoginHelper.Login(
+                self.Root(),
                 globalComponent.GlobalConfig.Address,
                 "",
                 "");
