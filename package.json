@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "cn.etetet.yiuistatesync",
   "displayName": "ET.YIUI.StateSync",
   "version": "0.2.1",
@@ -17,16 +17,16 @@
   "dependencies": {
     "cn.etetet.statesync": "0.0.48",
     "cn.etetet.packagemanager": "0.0.10",
-    "cn.etetet.yiui": "0.2.0",
-    "cn.etetet.yiuiframework": "0.2.0",
-    "cn.etetet.yiuiyooassets": "0.2.0",
-    "cn.etetet.yiuiloopscrollrectasync": "0.2.0",
-    "cn.etetet.yiuigm": "0.2.0",
-    "cn.etetet.yiuireddot": "0.2.0",
-    "cn.etetet.yiuitips": "0.2.0",
-    "cn.etetet.yiuilocalization": "0.2.0",
-    "cn.etetet.yiui3ddisplay": "0.2.0",
-    "cn.etetet.yiuieffect": "0.2.0"
+    "cn.etetet.yiui": "0.2.1",
+    "cn.etetet.yiuiframework": "0.2.1",
+    "cn.etetet.yiuiyooassets": "0.2.1",
+    "cn.etetet.yiuiloopscrollrectasync": "0.2.1",
+    "cn.etetet.yiuigm": "0.2.1",
+    "cn.etetet.yiuireddot": "0.2.1",
+    "cn.etetet.yiuitips": "0.2.1",
+    "cn.etetet.yiuilocalization": "0.2.1",
+    "cn.etetet.yiui3ddisplay": "0.2.1",
+    "cn.etetet.yiuieffect": "0.2.1"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@ET-Packages"
