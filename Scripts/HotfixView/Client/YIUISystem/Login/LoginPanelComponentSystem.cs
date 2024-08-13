@@ -35,8 +35,8 @@ namespace ET.Client
             await LoginHelper.Login(
                 self.Root(),
                 globalComponent.GlobalConfig.Address,
-                "",
-                "");
+                self.u_ComAccount.text,
+                self.u_ComPassword.text);
         }
 
         #endregion YIUIEvent结束
