@@ -85,3 +85,11 @@ MonoBehaviour:
         FilterRuleName: YIUIFilterRule
         AssetTags: 
         UserData: 
+      - CollectPath: Packages/cn.etetet.yiui3ddisplay/Assets/GameRes/YIUI
+        CollectorGUID: fc254c93445b7b044924c9b531f8e1a2
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: YIUIFilterRule
+        AssetTags: 
+        UserData: 
