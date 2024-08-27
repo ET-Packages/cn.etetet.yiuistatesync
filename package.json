@@ -17,7 +17,6 @@
   "dependencies": {
     "cn.etetet.statesync": "0.0.49",
     "cn.etetet.packagemanager": "0.0.12",
-    "cn.etetet.yiui": "0.3.1",
     "cn.etetet.yiuiframework": "0.3.1",
     "cn.etetet.yiuiyooassets": "0.3.1",
     "cn.etetet.yiuiloopscrollrectasync": "0.3.1",
