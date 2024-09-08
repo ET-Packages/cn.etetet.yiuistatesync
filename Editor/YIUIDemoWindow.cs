@@ -92,6 +92,7 @@ namespace YIUIFramework.Editor
             if (SyncYooAssetSetting())
             {
                 EditorUtility.DisplayDialog("提示", "同步YooAsset设置 成功", "确认");
+                CloseWindowRefresh();
             }
         }
 
@@ -156,6 +157,7 @@ namespace YIUIFramework.Editor
             if (SwitchToScene())
             {
                 EditorUtility.DisplayDialog("提示", "场景切换 成功", "确认");
+                CloseWindowRefresh();
             }
         }
 
@@ -180,6 +182,7 @@ namespace YIUIFramework.Editor
             if (CopyET())
             {
                 EditorUtility.DisplayDialog("提示", "拷贝ET工程 成功", "确认");
+                CloseWindowRefresh();
             }
         }
 
@@ -216,6 +219,7 @@ namespace YIUIFramework.Editor
             if (ChangeFile())
             {
                 EditorUtility.DisplayDialog("提示", "注释文件 成功", "确认");
+                CloseWindowRefresh();
             }
         }
 
