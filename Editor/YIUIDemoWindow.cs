@@ -45,6 +45,7 @@ namespace YIUIFramework.Editor
         {
             CloseWindow();
             AssetDatabase.SaveAssets();
+            EditorApplication.ExecuteMenuItem("ET/Loader/ReGenerateProjectAssemblyReference");
             EditorApplication.ExecuteMenuItem("Assets/Refresh");
         }
 
