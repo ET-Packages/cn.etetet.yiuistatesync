@@ -93,3 +93,11 @@ MonoBehaviour:
         FilterRuleName: CollectPrefab
         AssetTags: 
         UserData: 
+      - CollectPath: Packages/cn.etetet.yiuiloopscrollrectasync/Assets/GameRes/YIUI/LoopScrollRectDemo
+        CollectorGUID: 9881c6d802eddfa46a3521cc088d1ba2
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
