@@ -29,7 +29,7 @@ namespace YIUIFramework.Editor
         [MenuItem("ET/YIUI Demo")]
         private static void OpenWindow()
         {
-            var window = GetWindow<YIUIDemoWindow>();
+            var window = GetWindow<YIUIDemoWindow>("YIUIDemo");
             window.Show();
         }
 
