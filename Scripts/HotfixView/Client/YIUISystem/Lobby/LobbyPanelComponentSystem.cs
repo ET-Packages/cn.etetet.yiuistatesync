@@ -5,11 +5,6 @@ using System.Collections.Generic;
 
 namespace ET.Client
 {
-    /// <summary>
-    /// Author  Lsy
-    /// Date    2024.6.24
-    /// Desc
-    /// </summary>
     [FriendOf(typeof(LobbyPanelComponent))]
     public static partial class LobbyPanelComponentSystem
     {
