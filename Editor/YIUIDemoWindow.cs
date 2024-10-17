@@ -7,6 +7,8 @@
 using System;
 using System.IO;
 using System.Reflection;
+using System.Text;
+using System.Text.RegularExpressions;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using TMPro;
@@ -207,6 +209,7 @@ namespace YIUIFramework.Editor
             catch (Exception ex)
             {
                 Debug.LogError($"复制ET.sln过程中失败 注意请关闭IDE编辑器使用 {ex}");
+
                 //return false;
             }
 
@@ -226,6 +229,11 @@ namespace YIUIFramework.Editor
 
         private bool ChangeFile()
         {
+            if (!ReplaceUIComponentSystem())
+            {
+                return false;
+            }
+
             var sourceFilePath = $"{Application.dataPath}/../Packages/cn.etetet.{YIUIPackageName}/Scripts/HotfixView/Client";
 
             var csFilesInA = Directory.GetFiles(sourceFilePath, "*.cs", SearchOption.AllDirectories);
@@ -305,6 +313,47 @@ namespace YIUIFramework.Editor
             }
 
             return true;
+        }
+
+        private static bool ReplaceUIComponentSystem()
+        {
+            string filePath = $"{Application.dataPath}/../Packages/cn.etetet.ui/Scripts/HotfixView/Client/UIComponentSystem.cs";
+            return ReplaceFile(filePath, "self.UIGlobalComponent =", "//self.UIGlobalComponent =");
+        }
+
+        private static bool ReplaceFile(string filePath, string oldText, string newText, string checkString = "")
+        {
+            if (!File.Exists(filePath))
+            {
+                Debug.Log($"文件不存在：{filePath}");
+                return true;
+            }
+
+            try
+            {
+                string content = File.ReadAllText(filePath);
+                if (!content.Contains(string.IsNullOrEmpty(checkString) ? oldText : checkString))
+                {
+                    return true;
+                }
+
+                if (content.Contains(newText))
+                {
+                    return true;
+                }
+
+                content = Regex.Replace(content, oldText, newText);
+
+                File.WriteAllText(filePath, content, Encoding.UTF8);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"替换失败：{filePath} {ex.Message}");
+            }
+
+            return false;
         }
 
         [BoxGroup("  ")]
