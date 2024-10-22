@@ -179,6 +179,43 @@ namespace YIUIFramework.Editor
         }
 
         [HorizontalGroup("DemoChange")]
+        [Button("覆盖Init场景", 30)]
+        private void DemoChangeCoverScene()
+        {
+            CallBackOk("覆盖ET.Loader 的Init场景 覆盖后就无法来回切换了请注意!!!", () =>
+            {
+                if (DemoCoverScene())
+                {
+                    EditorUtility.DisplayDialog("提示", "覆盖Init场景 成功", "确认");
+                    CloseWindowRefresh();
+                }
+            });
+        }
+
+        private bool DemoCoverScene()
+        {
+            var sceneYIUIPath = $"Packages/cn.etetet.{YIUIPackageName}/Scenes/Init.unity";
+            var sceneETPath   = $"Packages/cn.etetet.{ETLoaderPackageName}/Scenes/Init.unity";
+
+            try
+            {
+                if (!File.Exists(sceneYIUIPath))
+                {
+                    EditorUtility.DisplayDialog("提示", $"Init场景 源文件不存在。{sceneYIUIPath}", "确认");
+                    return false;
+                }
+
+                File.Copy(sceneYIUIPath, sceneETPath, true);
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"复制 Init场景 过程中失败 注意请关闭IDE编辑器使用 {ex}");
+            }
+
+            return true;
+        }
+
+        [HorizontalGroup("DemoChange")]
         [Button("拷贝ET工程", 30)]
         private void DemoCopyET()
         {
@@ -431,6 +468,37 @@ namespace YIUIFramework.Editor
             {
                 Directory.CreateDirectory(path);
             }
+        }
+
+        public static void CallBackOk(string content, Action okCallBack, Action cancelCallBack = null)
+        {
+            #if UNITY_EDITOR
+            var result = EditorUtility.DisplayDialog("提示", content, "确认");
+            if (result) //确定
+            {
+                try
+                {
+                    okCallBack?.Invoke();
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e);
+                    throw;
+                }
+            }
+            else
+            {
+                try
+                {
+                    cancelCallBack?.Invoke();
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e);
+                    throw;
+                }
+            }
+            #endif
         }
     }
 }
