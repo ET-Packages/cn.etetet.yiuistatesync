@@ -24,6 +24,7 @@ namespace ET.Client
         public YIUIPanelComponent UIPanel => u_UIPanel;
         public UITaskEventP0 u_EventEnterMap;
         public UITaskEventHandleP0 u_EventEnterMapHandle;
+        public const string OnEventEnterMapInvoke = "LobbyPanelComponent.OnEventEnterMapInvoke";
 
     }
 }

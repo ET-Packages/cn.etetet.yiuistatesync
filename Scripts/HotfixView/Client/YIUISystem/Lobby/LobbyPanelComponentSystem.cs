@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using YIUIFramework;
 using System.Collections.Generic;
@@ -27,7 +27,7 @@ namespace ET.Client
 
         #region YIUIEvent开始
 
-        [YIUIInvoke]
+        [YIUIInvoke(LobbyPanelComponent.OnEventEnterMapInvoke)]
         private static async ETTask OnEventEnterMapInvoke(this LobbyPanelComponent self)
         {
             await EnterMapHelper.EnterMapAsync(self.Root());

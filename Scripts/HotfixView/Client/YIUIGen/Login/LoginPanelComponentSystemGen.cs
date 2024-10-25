@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using YIUIFramework;
 using System.Collections.Generic;
@@ -40,7 +40,7 @@ namespace ET.Client
             self.u_ComAccount = self.UIBase.ComponentTable.FindComponent<UnityEngine.UI.InputField>("u_ComAccount");
             self.u_ComPassword = self.UIBase.ComponentTable.FindComponent<UnityEngine.UI.InputField>("u_ComPassword");
             self.u_EventLogin = self.UIBase.EventTable.FindEvent<UITaskEventP0>("u_EventLogin");
-            self.u_EventLoginHandle = self.u_EventLogin.Add(self,"OnEventLoginInvoke");
+            self.u_EventLoginHandle = self.u_EventLogin.Add(self,LoginPanelComponent.OnEventLoginInvoke);
 
         }
     }

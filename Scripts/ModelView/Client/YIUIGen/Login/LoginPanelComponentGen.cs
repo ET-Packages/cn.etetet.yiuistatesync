@@ -26,6 +26,7 @@ namespace ET.Client
         public UnityEngine.UI.InputField u_ComPassword;
         public UITaskEventP0 u_EventLogin;
         public UITaskEventHandleP0 u_EventLoginHandle;
+        public const string OnEventLoginInvoke = "LoginPanelComponent.OnEventLoginInvoke";
 
     }
 }
