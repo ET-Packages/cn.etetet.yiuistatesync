@@ -69,14 +69,6 @@ MonoBehaviour:
         FilterRuleName: YIUIFilterRule
         AssetTags: 
         UserData: 
-      - CollectPath: Packages/cn.etetet.yiuilocalization/Assets/GameRes/I2Localization
-        CollectorGUID: c4920432a4d094241a7ac5e7736f1313
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
       - CollectPath: Assets/GameRes/YIUI
         CollectorGUID: 7df93ffc8327ee443a9ffadd3c94bd53
         CollectorType: 0
