@@ -6,7 +6,7 @@ namespace ET.Client
     {
         protected override async ETTask Run(Scene scene, SceneChangeFinish args)
         {
-            await YIUIMgrComponent.Inst.Root.OpenPanelAsync<MainPanelComponent>();
+            await scene.YIUIRoot().OpenPanelAsync<MainPanelComponent>();
         }
     }
 }
