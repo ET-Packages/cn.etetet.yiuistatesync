@@ -51,10 +51,10 @@ namespace YIUIFramework.Editor
             EditorApplication.ExecuteMenuItem("Assets/Refresh");
         }
 
-        private const string YIUIPackageName     = "yiuistatesync";
-        private const string ETPackageName       = "statesync";
+        private const string YIUIPackageName = "yiuistatesync";
+        private const string ETPackageName = "statesync";
         private const string ETLoaderPackageName = "loader";
-        private const string UIProjectResPath    = "Assets/GameRes/YIUI";
+        private const string UIProjectResPath = "Assets/GameRes/YIUI";
 
         public enum EDemoType
         {
@@ -129,11 +129,11 @@ namespace YIUIFramework.Editor
                 return false;
             }
 
-            yooSetting.UniqueBundleName      = true;
+            yooSetting.UniqueBundleName = true;
             defaultPackage.EnableAddressable = true; //YIUI Demo必须开启可寻址
 
-            var                       yiuiGroupName = "YIUI";
-            AssetBundleCollectorGroup yiuiGroup     = default;
+            var yiuiGroupName = "YIUI";
+            AssetBundleCollectorGroup yiuiGroup = default;
             foreach (var group in defaultPackage.Groups)
             {
                 if (group.GroupName == yiuiGroupName)
@@ -167,7 +167,7 @@ namespace YIUIFramework.Editor
         private bool SwitchToScene()
         {
             var scenePath = $"Packages/cn.etetet.{(OpenYIUI ? YIUIPackageName : ETLoaderPackageName)}/Scenes/Init.unity";
-            var path      = $"{Application.dataPath}/../{scenePath}";
+            var path = $"{Application.dataPath}/../{scenePath}";
             if (!File.Exists(path))
             {
                 Debug.LogError($"路径不存在场景: {path} ");
@@ -195,7 +195,7 @@ namespace YIUIFramework.Editor
         private bool DemoCoverScene()
         {
             var sceneYIUIPath = $"Packages/cn.etetet.{YIUIPackageName}/Scenes/Init.unity";
-            var sceneETPath   = $"Packages/cn.etetet.{ETLoaderPackageName}/Scenes/Init.unity";
+            var sceneETPath = $"Packages/cn.etetet.{ETLoaderPackageName}/Scenes/Init.unity";
 
             try
             {
@@ -228,9 +228,9 @@ namespace YIUIFramework.Editor
 
         private bool CopyET()
         {
-            var et                  = "ET.sln";
-            var packageName         = OpenYIUI ? YIUIPackageName : ETPackageName;
-            var sourceFilePath      = $"{Application.dataPath}/../Packages/cn.etetet.{packageName}/{et}";
+            var et = "ET.sln";
+            var packageName = OpenYIUI ? YIUIPackageName : ETPackageName;
+            var sourceFilePath = $"{Application.dataPath}/../Packages/cn.etetet.{packageName}/{et}";
             var destinationFilePath = $"{Application.dataPath}/../{et}";
 
             try
@@ -266,6 +266,11 @@ namespace YIUIFramework.Editor
 
         private bool ChangeFile()
         {
+            if (!ReplaceEventSystem())
+            {
+                return false;
+            }
+
             if (!ReplaceUIComponentSystem())
             {
                 return false;
@@ -296,11 +301,11 @@ namespace YIUIFramework.Editor
         {
             if (File.Exists(path))
             {
-                var fileName    = Path.GetFileName(path);
+                var fileName = Path.GetFileName(path);
                 var fileContent = File.ReadAllText(path);
 
                 bool startsWithSlashStar = fileContent.StartsWith("/*");
-                bool endsWithStarSlash   = fileContent.EndsWith("*/");
+                bool endsWithStarSlash = fileContent.EndsWith("*/");
 
                 string modifiedContent;
 
@@ -358,6 +363,12 @@ namespace YIUIFramework.Editor
             return ReplaceFile(filePath, "self.UIGlobalComponent =", "//self.UIGlobalComponent =");
         }
 
+        private static bool ReplaceEventSystem()
+        {
+            string filePath = $"{Application.dataPath}/../Packages/cn.etetet.core/Scripts/Core/Share/World/EventSystem/EventSystem.cs";
+            return ReplaceFile(filePath, "public class EventSystem", "public partial class EventSystem");
+        }
+
         private static bool ReplaceFile(string filePath, string oldText, string newText, string checkString = "")
         {
             if (!File.Exists(filePath))
@@ -411,7 +422,7 @@ namespace YIUIFramework.Editor
                 return;
             }
 
-            Type      settingsType          = typeof(TMP_Settings);
+            Type settingsType = typeof(TMP_Settings);
             FieldInfo defaultFontAssetField = settingsType.GetField("m_defaultFontAsset", BindingFlags.NonPublic | BindingFlags.Instance);
 
             if (defaultFontAssetField != null && newDefaultFontAsset != null)
@@ -427,7 +438,7 @@ namespace YIUIFramework.Editor
         [Button("打开YooAsset设置", 40)]
         private void SetYooAssetSetting()
         {
-            Type      type      = typeof(AssetBundleCollectorSettingData);
+            Type type = typeof(AssetBundleCollectorSettingData);
             FieldInfo fieldInfo = type.GetField("_setting", BindingFlags.NonPublic | BindingFlags.Static);
             if (fieldInfo != null)
             {
