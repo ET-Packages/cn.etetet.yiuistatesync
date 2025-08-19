@@ -32,7 +32,7 @@ namespace ET.Client
         {
             self.UIBase.SetActive(false);
             await EnterMapHelper.EnterMapAsync(self.Root());
-            await self.UIPanel.CloseAsync(false, true, true);
+            await self.UIPanel.CloseAsync();
         }
 
         #endregion YIUIEvent结束
