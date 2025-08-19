@@ -1,7 +1,7 @@
 ﻿{
   "name": "cn.etetet.yiuistatesync",
   "displayName": "ET.YIUI.StateSync",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "unity": "2022.3",
   "category": "Demo/YIUI|UI/YIUI",
   "description": "YIUI Demo >>> 文档: https://lib9kmxvq7k.feishu.cn/wiki/ES7Gwz4EAiVGKSkotY5cRbTznuh",
@@ -17,7 +17,7 @@
   "dependencies": {
     "cn.etetet.statesync": "3.0.11",
     "cn.etetet.packagemanager": "1.0.7",
-    "cn.etetet.yiuiframework": "3.0.0",
+    "cn.etetet.yiuiframework": "3.0.1",
     "cn.etetet.yiuiyooassets": "3.0.0",
     "cn.etetet.yiuiloopscrollrectasync": "3.0.0",
     "cn.etetet.yiuigm": "3.0.0",
