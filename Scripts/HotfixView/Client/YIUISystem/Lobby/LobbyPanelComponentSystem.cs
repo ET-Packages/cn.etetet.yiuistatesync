@@ -30,8 +30,9 @@ namespace ET.Client
         [YIUIInvoke(LobbyPanelComponent.OnEventEnterMapInvoke)]
         private static async ETTask OnEventEnterMapInvoke(this LobbyPanelComponent self)
         {
+            self.UIBase.SetActive(false);
             await EnterMapHelper.EnterMapAsync(self.Root());
-            await self.UIPanel.CloseAsync();
+            await self.UIPanel.CloseAsync(false, true, true);
         }
 
         #endregion YIUIEvent结束
